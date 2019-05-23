@@ -3,9 +3,9 @@
 <div class="post">
 <p class="post-header">
   <span>
-    <%= link_to(@comment.post.user.profile) do %>
-      <%= image_tag @comment.post.user.profile.profile_photo('tac'), class: 'tac-image' %>
-    <% end %>
+    <!--<= link_to(@comment.post.user.profile) do %>-->
+    <!--  <%#= image_tag @comment.post.user.profile.profile_photo('tac'), class: 'tac-image' %>-->
+    <!--<#% end %>-->
 
     <%= link_to "#{@comment.post.user.first_name}", @comment.post.user.profile, class: "user-name" %>
   </span>
@@ -15,15 +15,15 @@
 
 <p class="post-content">
   <%= @comment.post.content %><br/>
-  <% if @comment.post.image.exists? %>
-    <%= image_tag @comment.post.image.url(:medium) %>
-  <% end %>
+  <%# if @comment.post.image.exists? %>
+    <%#= image_tag @comment.post.image.url(:medium) %>
+  <%# end %>
 </p>
 
 <%= form_for(@comment) do |c| %>
-  <%= link_to(current_user.profile) do %>
-    <%= image_tag current_user.profile.profile_photo('tac'), class: 'tac-image new-comment-image' %>
-  <% end %>
+  <!--<%#= link_to(current_user.profile) do %>-->
+  <!--  <%#= image_tag current_user.profile.profile_photo('tac'), class: 'tac-image new-comment-image' %>-->
+  <!--<%# end %>-->
 
   <%= c.text_area :content, class: "comment-field", placeholder: "Write a comment...", rows: "1" %>
   <%= c.submit "Save changes" %>

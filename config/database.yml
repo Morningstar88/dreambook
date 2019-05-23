@@ -1,3 +1,11 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  template: template0
+  username: ubuntu
+  password: password
+
 # PostgreSQL. Versions 8.2 and up are supported.
 #
 # Install the pg driver:
@@ -16,10 +24,11 @@
 #
 development:
   adapter: postgresql
-  encoding: unicode
+  encoding: unicode  # ORIG: unicode
   database: CloneBook_development
   host: localhost
   pool: 5
+  template: template0
   username: admin
   password: password
   timeout: 5000
@@ -51,6 +60,7 @@ test:
   database: CloneBook_test
   host: localhost
   pool: 5
+  template: template0
   username: admin
   password: password
   timeout: 5000

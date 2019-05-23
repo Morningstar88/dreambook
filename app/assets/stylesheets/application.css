@@ -14,7 +14,22 @@
  *= require_self
 
 *= require font_awesome5
+
+SHADES OF FOREST GREEN:
+
+https://www.color-hex.com/color/228b22
+
+
+FONT SIZES (USE SCSS!)
+
+span content: 17px;
+post content: 17px;
+
+
  */
+ 
+ @import url('https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,400,600&display=swap');
 
  body {
    margin: 0;
@@ -24,23 +39,32 @@
    grid-template-columns: 260px 500px 320px 255px;
    /* grid-template-columns: 300px 450px 342px 273px; */
    grid-template-rows: 24px auto;
-   font-family: 'Roboto', sans-serif;
-   background-color: rgb(233,235,238);
+   font-family: 'Didact Gothic', sans-serif;
+   background-color: rgb(2,23,33);
    font-size: 12px;
+   /*filter: grayscale(50%);*/
  }
 
 
-.navbar {
+.navbar /*LOGIN */ {
   display: inline;
   position: fixed;
-  padding-bottom: 11px;
+  padding-bottom: 88px; /*ORIG 20px;*/
   /* margin-bottom: 4vh; */
   height: 24px;
-  background-color: rgb(66,103,178);
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/backlit-creepy-dark-289367.jpg");
+  opacity: 1;
+  background-color: rgb(16,96,16);
+  font-family: 'Montserrat';
+  font-weight: 600;
   margin: 0;
   color: rgb(255,255,255);
   width: 100%;
   z-index: 5;
+}
+
+.navbar-main {
+   padding-bottom: 20px; 
 }
 
 .navbar ul {
@@ -48,9 +72,11 @@
 }
 .navbar li {
   display: inline;
-  font-size: 11px;
-  font-weight: bold;
-  margin-right: 25px;
+  font-size: 24px; /*ORIG: 13px*/
+  /*font-weight: bold;*/
+  margin-right: 45px; /*ORIG */
+  letter-spacing: -1px;
+  line-height: 44px;
 }
 .navbar-tac {
   margin-right: 2.5px !important;
@@ -79,18 +105,33 @@ a:visited {
   height: 60px;
 }
 
-.entry-navbar ul {
-  margin-top: 30px;
+
+.entry-navbar ul /*To move entry text up and down Or use .link-login a, .link-signup a */{
+  margin-top: 50px;
 }
 
 .logo {
-  font-size: 36px !important;
+  font-size: 56px !important; /*ORIG 36*/
   margin-left: 150px;
+  font-family: 'Montserrat';
+  font-weight: 200 !important;
   margin-right: 675px !important;
 }
 
 .link-login a, .link-signup a{
-  font-size: 14px;
+  font-size: 40px;
+   /*margin-top: 90px;*/
+}
+
+.link-signup a {
+  line-height: 8%;
+}
+
+
+
+.font-input {
+  font-family: "Montserrat" !important;
+  font-weight: 200;
 }
 
 
@@ -99,7 +140,10 @@ textarea {
   padding: 5% 2% 0 2%;
   border: none;
   resize: none;
-  background-color: white;
+  background-color: rgba(250,255,250);
+  font-family: "Montserrat";
+  font-size: 19px;
+  caret-color: rgb(23,100,23;)
 }
 
 .comment-field {
@@ -109,7 +153,7 @@ textarea {
   margin-bottom: 5px;
   padding-top: 8px;
   padding-bottom: 8px;
-  font-size: 11px;
+  font-size: 19px;
 }
 
 input[type=submit] {
@@ -118,17 +162,27 @@ input[type=submit] {
   /* margin: auto; */
   margin-left: 5%;
   color: white;
-  padding: 6.5px 0;
+  padding: 9px 0;
   border: none;
   border-radius: 3px;
-  font-weight: bold;
-  background-color: rgb(66,103,178);
+  /*font-weight: bold;*/
+  font-family: "Montserrat";
+  font-weight: 100;
+  font-size: 29px;
+  letter-spacing: -3px;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/backlit-creepy-dark-289367.jpg");
+  opacity: 0.8;
+  border-radius: 10px 10px 10px 4px;
+}
+
+.input:focus {
+  border: 1px solid rgb(12,67,12);
 }
 
 
 .posts, .posts-edit, .posts-show, .profiles-edit, .comments-edit, .users-show, .registrations-edit{
   grid-area: 2 / 2 / 3 / 3;
-  margin-top: 20px;
+  margin-top: 30px; /*OORIG 20px*/
 }
 
 .users-index, .requests-index {
@@ -140,7 +194,7 @@ input[type=submit] {
 
 .registrations-new, .sessions-new {
   grid-area: 2 / 3 / 3 / 4;
-  margin-top: 70px;
+  margin-top: 190px; /*ORIG 70  */
   width: 120%;
 }
 
@@ -162,8 +216,11 @@ input[type=submit] {
   width: 851px;
   height: 358px;
   /* height: 100px; */
-  background: linear-gradient(to top, rgb(90, 90, 90), white);
+  /*background: linear-gradient(to top, rgb(12, 40, 12), white);*/
+  background:#222;
   margin-left: 25px;
+  margin-top: 30px;
+  border-radius: 5px;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
 }
@@ -173,6 +230,34 @@ input[type=submit] {
   border-bottom-right-radius: 3px;
 }
 
+.cover-name {
+  font-size: 39px !important;
+   /*text-shadow: */
+   /* 1px 0px 1px #ccc, 0px 1px 0px #eee, */
+   /* 2px 1px 1px #ccc, 1px 2px 0px #eee,*/
+   /* 2px 2px 1px #ccc, 2px 2px 0px #eee,*/
+   /* 2px 1px 1px #ccc, 2px 1px 0px #eee;*/
+   /* 5px 4px 1px #ccc, 4px 5px 1px #eee;*/
+    /*6px 5px 1px #ccc, 5px 6px 1px #eee,*/
+    /*7px 6px 1px #ccc;*/
+    letter-spacing: 0px;
+    color: rgb(250,255,250);
+    font-family: "Montserrat";
+    font-weight: 200;
+}
+
+.user-name { /*Master name for comments*/
+    font-size: 18px; /*ORIG 17px*/
+    color: rgb(12,65,12);
+    letter-spacing: -1px;
+    line-height: 0.1;
+    padding-right: 5px;
+   font-family: 'Montserrat';
+}
+
+a:user-name {
+font-family: 'Montserrat';
+}
 
 .user-image {
   grid-area: 2 / 2 / 3 / 3;
@@ -184,7 +269,7 @@ input[type=submit] {
 .user-image img{
   width: 175px;
   height: 175px;
-  border: 4px solid white;
+  border: 2px solid white;
   border-radius: 3px;
   margin-top: 120px;
 }
@@ -226,12 +311,17 @@ input[type=submit] {
 .edit-your-profile-button {
   position: absolute;
   bottom: 50px;
-  right: 10px;
-  font-weight: bold;
-  background-color: rgb(233, 235, 238);
-  border: 0.5px solid black;
-  border-radius: 3px;
-  padding: 6px 20px;
+  right: 6px;
+  color: rgb(255,255,255) !important;
+  /*background-color: rgb(233, 235, 238);*/
+  background: transparent;
+  border: 1px solid rgba(255,255,255);
+  border-radius: 20px 8px 20px 8px;
+  font-size: 24px;
+  padding: 9px 28px;
+  font-family: 'Montserrat';
+  letter-spacing: -2px;
+  font-weight: 100;
   /* transform: translateY(25px); */
   /* margin-left: 210px; */
 }
@@ -256,8 +346,8 @@ input[type=submit] {
   grid-area: 3 / 2 / 4 / 3;
   height: 185px;
   width: 58%;
-  background-color: white;
-  border: 1px solid lightgrey;
+  background-color: #222;
+  border: 1px inset #444;
   margin-left: 25px;
   margin-top: 12px;
   margin-bottom: 20px;
@@ -270,6 +360,8 @@ input[type=submit] {
   margin-top: 17px;
   font-size: 18px;
   line-height: 1.7;
+  /*background-color: #f22;*/
+  color: #fefefe;
 }
 
 .friends-background {
@@ -367,8 +459,8 @@ input[type=submit] {
 
 
 .user-name {
-  color: rgb(66, 103, 178) !important;
-  font-weight: bold;
+     color: rgb(12,98,12);
+   font-weight: bold;
 }
 
 .new-post img {
@@ -382,11 +474,13 @@ input[type=submit] {
 
 .post, .new-post {
   border: 1px solid lightgrey;
-  background-color: white;
+  background: #fefffe;
+ /* background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/black-and-white-close-up-eyes-407035.jpg") 30% 48%; */
   border-radius: 3px;
   margin-bottom: 13px;
   padding-bottom: 6.5px;
   padding-left: 6.5px;
+  font-family: 'Didact Gothic' !important;
 }
 
 .new-post {
@@ -401,7 +495,7 @@ input[type=submit] {
   margin-bottom: 9px;
   color: rgb(66,103,178);
   font-weight: bold;
-  font-size: 11px;
+  font-size: 15px;
 
 }
 .new-post-top {
@@ -497,10 +591,11 @@ input[type=submit] {
 }
 
 .post-content {
-  font-size: 14px;
+  font-size: 19px;
   line-height: 2;
   padding-left: 5px;
   padding-right: 5px;
+  font-family: 'Montserrat';
 }
 .like-comment-buttons {
   padding: 3px 0px;
@@ -537,11 +632,12 @@ input[type=submit] {
   /* float: none; */
   width: 48% !important;
   margin-left: 1%;
-  color: rgb(90, 90, 90) !important;
+  color: rgb(30, 90, 30) !important;
   padding: 6px 40px;
   border: none;
   border-radius: 3px;
-  font-weight: bold;
+  /*font-weight: bold;*/
+  font-family: "Didact Gothic";
   background-color: white !important;
 }
 .like-button:hover, .comment-button:hover {
@@ -578,7 +674,7 @@ input[type=submit] {
   position: absolute;
   right: -60px;
   /* margin-right: 5%; */
-  font-size: 10px;
+  font-size: 13px;
   color: rgb(90,90,90);
 }
 .edit-delete-comment a:hover {
@@ -595,16 +691,18 @@ input[type=submit] {
   margin-left: 25px !important;
   padding: 10px 10px 5px 10px !important;
   border-radius: 15px;
-  background-color: rgb(230, 235, 238);
+  background-color: rgb(252, 255, 252);
 }
 .comment-content {
-
+font-size: 17px;
+font-family: 'Montserrat';
 }
 
 .regist-header {
-  font-size: 38px;
+  font-size: 42px;
   margin-left: 5px;
   margin-bottom: 3px;
+  color: rgb(250,255,250);
 }
 .regist-free {
   font-size: 20px;
@@ -699,7 +797,7 @@ input[type=submit] {
   margin-left: 80px;
   /* LINE BELOW ADDED TO DEACTIVATE LINK SIGNIN VIA FACEBOOK / GITHUB AS THESE TO NO WORK IN HEORKU */
   /* REMOVE LINE BELOW TO RESTORE FEATURE IN LOCAL DEMONSTRATION */
-  pointer-events: none;
+  /*pointer-events: none;*/
 }
 
 .facebook-signin {
@@ -709,6 +807,11 @@ input[type=submit] {
 .github-signin {
   font-size: 100px;
   margin-left: 20px;
+}
+
+.wisdom-quote {
+  font-family: "Montserrat";
+  font-weight: 200;
 }
 
 .external-login .regist-header {

@@ -1,8 +1,9 @@
+
 <div class="posts">
 <div class = "new-post">
 
   <div class="new-post-top">
-    <span>Make Post</span>
+    <!--<span></span>-->
   </div>
 
   <%= form_for(@post, html: {multipart: true}) do |f| %>
@@ -11,8 +12,8 @@
       <%= image_tag current_user.profile.profile_photo('thumb'), size: '100x100' %>
     <% end %>
 
-    <%= f.text_area :content, rows: "3", placeholder: "What's on your mind, #{current_user.first_name}?" %><br/>
-    <%= f.label :image, fa_icon('image', type: :solid, text: "Photo", color: 'rgb(66, 103, 178)'), class: 'photo-label' %><br/>
+    <%= f.text_area :content, rows: "3", placeholder: "What do you want today, #{current_user.first_name}?" %><br/>
+    <%= f.label :image, fa_icon('image', type: :solid, text: "Photo", color: 'rgb(16, 103, 16)'), class: 'photo-label' %><br/>
     <%= f.file_field :image, class: 'post-photo' %><br/>
     <%= f.submit "Post" %>
   <% end %>
@@ -146,3 +147,10 @@
 <%= link_to_next_page @posts, 'Next Page', class: "next-page" %>
 
 </div>
+
+<script>
+function myFunction(){
+  alert("hello")
+}
+</script>
+

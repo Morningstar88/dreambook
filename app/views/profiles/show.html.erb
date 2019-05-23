@@ -28,7 +28,7 @@
   <% end %>
 
   <% if @profile.user == current_user %>
-    <%= link_to fa_icon('pencil-alt', type: :solid, style: 'color:rgb(90, 90, 90)', text: "Edit Your Profile"), edit_profile_path(current_user.profile), class: "edit-your-profile-button"%>
+    <%= link_to fa_icon('pencil-alt', type: :solid, style: 'color:rgb(255, 255, 255)', text: "Change"), edit_profile_path(current_user.profile), class: "edit-your-profile-button"%>
   <% end %>
 
 </div>
@@ -37,19 +37,19 @@
 
 <div class="user-info-left">
   <p>
-    <strong>Date of Birth:</strong>
-    <%= @profile.birthday %>
-    <br/>
+    <!--<strong>Date of Birth:</strong>-->
+    <!--<%#= @profile.birthday %>-->
+    <!--<br/>-->
 
-    <strong>Gender:</strong>
-    <%= @profile.gender %>
-    <br/>
+    <!--<strong>Gender:</strong>-->
+    <!--<%#= @profile.gender %>-->
+    <!--<br/>-->
 
     <strong>City:</strong>
     <%= @profile.location %>
     <br/>
 
-    <strong>About Me:</strong>
+    <strong>My Dream:</strong>
     <%= @profile.bio %>
   </p>
 </div>
@@ -82,7 +82,7 @@
         <p class="post-header">
           <span>
             <%= link_to(post.user.profile) do %>
-              <%= image_tag post.user.profile.profile_photo('tac'), class:'tac-image' %>
+              <%#= image_tag post.user.profile.profile_photo('tac'), class:'tac-image' %>
             <% end %>
 
             <%= link_to "#{post.user.first_name}", post.user.profile, class: "user-name" %>
@@ -106,14 +106,14 @@
           <% like = post.likes.where("user_id = ?", current_user.id) %>
           <% if like.empty? %>
           <%= button_to likes_path(like: {post_id: post.id} ), method: :post, class: "like-button" do %>
-            <%= fa_icon('thumbs-up', type: :regular, text: "Like") %>
+            <!--<%#= fa_icon('thumbs-up', type: :regular, text: "Like") %>-->
           <% end %>
           <% else %>
             <%= button_to like.first, method: :delete, class: "like-button unlike" do %>
               <%= fa_icon('thumbs-up', type: :solid, text: "Like") %>
             <% end %>
           <% end %>
-          <button class="comment-button"><i class="far fa-comment-alt"></i> Comment</button>
+          <button class="comment-button"><i class="far fa-comment-alt"></i> Talk</button>
         </div>
 
         <% if post.likes.count > 0 %>
@@ -164,7 +164,7 @@
 
             <p class="comment">
               <span class="comment-content">
-                <strong><%= link_to "#{user.first_name} #{user.last_name}", user.profile, class: "user-name" %></strong> <%= comment.content %>
+                <strong><%= link_to "#{user.first_name}", user.profile, class: "user-name" %></strong> <%= comment.content %>
               </span>
               <% if current_user.id == comment.user_id %>
                 <span class="edit-delete-comment">
@@ -182,7 +182,7 @@
             <%= image_tag current_user.profile.profile_photo('tac'), class: 'tac-image new-comment-image' %>
           <% end %>
 
-          <%= f.text_area :content, class: "comment-field", placeholder: "Write a comment...", rows: "1"  %>
+          <%= f.text_area :content, class: "comment-field", placeholder: "¯\\_(ツ)_/¯", rows: "1"  %>
           <%= f.hidden_field :post_id, value: post.id %>
           <%= f.submit "Comment" %>
         <% end %>

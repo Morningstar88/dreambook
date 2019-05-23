@@ -1,0 +1,2 @@
+class Channelpost < ApplicationRecord
+end

@@ -45,11 +45,18 @@ post content: 17px;
    /*filter: grayscale(50%);*/
  }
 
+p {
+  font-family: 'Montserrat';
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 200;
+
+}
 
 .navbar /*LOGIN */ {
   display: inline;
   position: fixed;
-  padding-bottom: 88px; /*ORIG 20px;*/
+  padding-bottom: 25px; /*88 is good!ORIG 20px;*/
   /* margin-bottom: 4vh; */
   height: 24px;
   background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/backlit-creepy-dark-289367.jpg");
@@ -107,7 +114,7 @@ a:visited {
 
 
 .entry-navbar ul /*To move entry text up and down Or use .link-login a, .link-signup a */{
-  margin-top: 50px;
+  margin-top: 9px;
 }
 
 .logo {
@@ -120,6 +127,7 @@ a:visited {
 
 .link-login a, .link-signup a{
   font-size: 40px;
+  font-family: 'Montserrat';
    /*margin-top: 90px;*/
 }
 
@@ -167,11 +175,11 @@ input[type=submit] {
   border-radius: 3px;
   /*font-weight: bold;*/
   font-family: "Montserrat";
-  font-weight: 100;
-  font-size: 29px;
-  letter-spacing: -3px;
+  font-weight: 400;
+  font-size: 49px;
+  letter-spacing: -2px;
   background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/backlit-creepy-dark-289367.jpg");
-  opacity: 0.8;
+  opacity: 1;
   border-radius: 10px 10px 10px 4px;
 }
 
@@ -183,6 +191,19 @@ input[type=submit] {
 .posts, .posts-edit, .posts-show, .profiles-edit, .comments-edit, .users-show, .registrations-edit{
   grid-area: 2 / 2 / 3 / 3;
   margin-top: 30px; /*OORIG 20px*/
+}
+
+.channel-posts {
+  position: relative;
+  margin-top: 100px;
+  margin-left: 50px;
+  color: #fefefe;
+}
+
+.channel-posts-display {
+  color: #fefefe;
+  margin-top: 100px;
+  margin-left: 50px;
 }
 
 .users-index, .requests-index {
@@ -204,7 +225,7 @@ input[type=submit] {
 
 .external-login {
   grid-area: 2 / 2 / 3 / 3;
-  margin-top: 70px;
+  margin-top: 270px;
   margin-left: -100px;
 }
 
@@ -221,6 +242,7 @@ input[type=submit] {
   margin-left: 25px;
   margin-top: 30px;
   border-radius: 5px;
+  font-family: 'Montserrat' !important;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
 }
@@ -358,6 +380,7 @@ font-family: 'Montserrat';
   width: 55%;
   margin-left: 52px;
   margin-top: 17px;
+  font-family: 'Montserrat' !important;
   font-size: 18px;
   line-height: 1.7;
   /*background-color: #f22;*/

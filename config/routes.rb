@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :channelcomments
+  resources :channelposts
   # get 'profiles/show'
   # get 'profiles/edit'
   root to: 'posts#index'

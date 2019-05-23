@@ -1,0 +1,22 @@
+<div class="channel-posts-display">
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @channelpost.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @channelpost.body %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @channelpost.link %>
+</p>
+
+<%= link_to 'Edit', edit_channelpost_path(@channelpost) %> |
+<%= link_to 'Back', channelposts_path %>
+</div>

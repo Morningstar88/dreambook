@@ -1,0 +1,2 @@
+class Channelcomment < ApplicationRecord
+end

@@ -14,7 +14,7 @@
 
 <div class="sessions-new">
 <h1 class="regist-header">log in</h1>
-
+<br/>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field font-input email-regist">
     <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email' %>
@@ -31,7 +31,7 @@
   <% end -%>
 
   <div class="actions registration-button">
-    <%= f.submit "Log in" %>
+    <%= f.submit "log in" %>
   </div>
 <% end %>
 

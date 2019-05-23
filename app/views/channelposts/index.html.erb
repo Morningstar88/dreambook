@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Channelposts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th>Link</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @channelposts.each do |channelpost| %>
+      <tr>
+        <td><%= channelpost.title %></td>
+        <td><%= channelpost.body %></td>
+        <td><%= channelpost.link %></td>
+        <td><%= link_to 'Show', channelpost %></td>
+        <td><%= link_to 'Edit', edit_channelpost_path(channelpost) %></td>
+        <td><%= link_to 'Destroy', channelpost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Channelpost', new_channelpost_path %>

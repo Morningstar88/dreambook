@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @channelcomment.comment_id %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @channelcomment.body %>
+</p>
+
+<%= link_to 'Edit', edit_channelcomment_path(@channelcomment) %> |
+<%= link_to 'Back', channelcomments_path %>

@@ -29,7 +29,7 @@ post content: 17px;
  */
  
  @import url('https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap');
- @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,400,600&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,600&display=swap');
 
  body {
    margin: 0;
@@ -56,7 +56,8 @@ post content: 17px;
   opacity: 1;
   background-color: rgb(16,96,16);
   font-family: 'Montserrat';
-  font-weight: 600;
+  font-weight: 300;
+  text-shadow: 1px 1px 1px (20,20,20,);
   margin: 0;
   color: rgb(255,255,255);
   width: 100%;
@@ -168,9 +169,9 @@ input[type=submit] {
   /*font-weight: bold;*/
   font-family: "Montserrat";
   font-weight: 100;
-  font-size: 29px;
+  font-size: 39px;
   letter-spacing: -3px;
-  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/backlit-creepy-dark-289367.jpg");
+  background: #111;
   opacity: 0.8;
   border-radius: 10px 10px 10px 4px;
 }
